@@ -261,8 +261,8 @@ pnpm run format
 ## 📚 Documentation
 
 - [Payment Integration Guide](docs/PAYMENT_INTEGRATION_GUIDE.md)
-- [API Documentation](docs/API.md)
-- [Deployment Guide](docs/DEPLOYMENT.md)
+- [Security Guide](SECURITY_GUIDE.md)
+- [Security Checklist](SECURITY_CHECKLIST.md)
 - [Checkpoint](CHECKPOINT_FINAL.md)
 
 ---
@@ -304,4 +304,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Made with ✨ by Maria Sambé**
-
