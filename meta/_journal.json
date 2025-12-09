@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1765236941783,
+      "tag": "0000_tranquil_colleen_wing",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1765237029801,
+      "tag": "0001_tiny_doomsday",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1765240146215,
+      "tag": "0002_vengeful_starfox",
+      "breakpoints": true
+    }
+  ]
+}

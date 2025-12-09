@@ -1,0 +1,589 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * ═══════════════════════════════════════════════════════════════════════════
+ * SURREAL MARKETPLACE - Sistema de Design Interdimensional
+ * Documento Visual Classificado: Protocolo Estético Omega
+ * ═══════════════════════════════════════════════════════════════════════════
+ */
+
+@custom-variant dark (&:is(.dark *));
+
+/* Fontes interdimensionais */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme inline {
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Cores surrealistas - Tema escuro por defeito */
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.12 0.02 280);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.16 0.025 280);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.14 0.025 280);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.75 0.18 180);
+  --primary-foreground: oklch(0.12 0.02 280);
+  --secondary: oklch(0.22 0.03 280);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.22 0.03 280);
+  --muted-foreground: oklch(0.6 0.02 250);
+  --accent: oklch(0.65 0.15 200);
+  --accent-foreground: oklch(0.12 0.02 280);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.95 0.01 250);
+  --border: oklch(0.3 0.03 280);
+  --input: oklch(0.22 0.03 280);
+  --ring: oklch(0.75 0.18 180);
+  --chart-1: oklch(0.75 0.18 180);
+  --chart-2: oklch(0.7 0.2 250);
+  --chart-3: oklch(0.72 0.18 155);
+  --chart-4: oklch(0.78 0.18 85);
+  --chart-5: oklch(0.7 0.25 320);
+  --sidebar: oklch(0.14 0.025 280);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: oklch(0.75 0.18 180);
+  --sidebar-primary-foreground: oklch(0.12 0.02 280);
+  --sidebar-accent: oklch(0.22 0.03 280);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.3 0.03 280);
+  --sidebar-ring: oklch(0.75 0.18 180);
+  
+  /* Cores de raridade */
+  --rarity-common: oklch(0.6 0.05 250);
+  --rarity-uncommon: oklch(0.7 0.15 145);
+  --rarity-rare: oklch(0.7 0.2 250);
+  --rarity-legendary: oklch(0.75 0.2 55);
+  --rarity-mythic: oklch(0.7 0.25 320);
+  
+  /* Cores de estado */
+  --energy-high: oklch(0.75 0.18 180);
+  --energy-medium: oklch(0.78 0.18 85);
+  --energy-low: oklch(0.65 0.22 25);
+}
+
+.dark {
+  --background: oklch(0.12 0.02 280);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.16 0.025 280);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.14 0.025 280);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.75 0.18 180);
+  --primary-foreground: oklch(0.12 0.02 280);
+  --secondary: oklch(0.22 0.03 280);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.22 0.03 280);
+  --muted-foreground: oklch(0.6 0.02 250);
+  --accent: oklch(0.65 0.15 200);
+  --accent-foreground: oklch(0.12 0.02 280);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.95 0.01 250);
+  --border: oklch(0.3 0.03 280);
+  --input: oklch(0.22 0.03 280);
+  --ring: oklch(0.75 0.18 180);
+  --chart-1: oklch(0.75 0.18 180);
+  --chart-2: oklch(0.7 0.2 250);
+  --chart-3: oklch(0.72 0.18 155);
+  --chart-4: oklch(0.78 0.18 85);
+  --chart-5: oklch(0.7 0.25 320);
+  --sidebar: oklch(0.14 0.025 280);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: oklch(0.75 0.18 180);
+  --sidebar-primary-foreground: oklch(0.12 0.02 280);
+  --sidebar-accent: oklch(0.22 0.03 280);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.3 0.03 280);
+  --sidebar-ring: oklch(0.75 0.18 180);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: 
+      radial-gradient(ellipse at 20% 30%, oklch(0.2 0.05 280 / 0.3) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, oklch(0.18 0.04 200 / 0.2) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+  
+  /* Scrollbar dimensional */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.14 0.02 280);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.35 0.05 280);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.45 0.08 180);
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * ANIMAÇÕES SURREALISTAS
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Respiração - para botões e elementos interativos */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 oklch(0.75 0.18 180 / 0);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px 4px oklch(0.75 0.18 180 / 0.3);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Pulso de stock */
+@keyframes stock-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.85;
+    filter: brightness(1.1);
+  }
+}
+
+.animate-stock-pulse {
+  animation: stock-pulse 2s ease-in-out infinite;
+}
+
+/* Glitch sutil */
+@keyframes glitch {
+  0%, 100% {
+    transform: translate(0);
+    filter: none;
+  }
+  20% {
+    transform: translate(-2px, 1px);
+    filter: hue-rotate(10deg);
+  }
+  40% {
+    transform: translate(2px, -1px);
+    filter: hue-rotate(-10deg);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease-in-out;
+}
+
+.hover-glitch:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Flutuação etérea */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Energia pulsante */
+@keyframes energy-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.energy-gradient {
+  background: linear-gradient(
+    90deg,
+    oklch(0.75 0.18 180),
+    oklch(0.65 0.15 200),
+    oklch(0.7 0.2 250),
+    oklch(0.75 0.18 180)
+  );
+  background-size: 300% 100%;
+  animation: energy-flow 4s ease infinite;
+}
+
+/* Borda dimensional */
+@keyframes border-glow {
+  0%, 100% {
+    border-color: oklch(0.3 0.03 280);
+    box-shadow: 0 0 0 0 oklch(0.75 0.18 180 / 0);
+  }
+  50% {
+    border-color: oklch(0.5 0.1 180);
+    box-shadow: 0 0 15px 2px oklch(0.75 0.18 180 / 0.2);
+  }
+}
+
+.animate-border-glow {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+/* Consciência emergente */
+@keyframes consciousness-emerge {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-consciousness {
+  animation: consciousness-emerge 0.6s ease-out forwards;
+}
+
+/* Ritual de transação */
+@keyframes transaction-ritual {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(180deg);
+  }
+}
+
+.animate-ritual {
+  animation: transaction-ritual 2s linear infinite;
+}
+
+/* Scan line - efeito CRT */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.scanline-overlay::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    oklch(0.75 0.18 180 / 0.1),
+    transparent
+  );
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * CLASSES UTILITÁRIAS SURREALISTAS
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Cards com efeito de profundidade */
+.card-dimensional {
+  @apply bg-card border border-border rounded-lg;
+  box-shadow: 
+    0 4px 6px -1px oklch(0 0 0 / 0.3),
+    0 2px 4px -2px oklch(0 0 0 / 0.2),
+    inset 0 1px 0 0 oklch(1 0 0 / 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-dimensional:hover {
+  box-shadow: 
+    0 10px 15px -3px oklch(0 0 0 / 0.4),
+    0 4px 6px -4px oklch(0 0 0 / 0.3),
+    0 0 20px 0 oklch(0.75 0.18 180 / 0.1),
+    inset 0 1px 0 0 oklch(1 0 0 / 0.08);
+  transform: translateY(-2px);
+}
+
+/* Texto com glow */
+.text-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.text-glow-intense {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 20px currentColor;
+}
+
+/* Badges de raridade */
+.badge-common {
+  background: var(--rarity-common);
+  @apply text-white;
+}
+
+.badge-uncommon {
+  background: var(--rarity-uncommon);
+  @apply text-white;
+}
+
+.badge-rare {
+  background: var(--rarity-rare);
+  @apply text-white;
+}
+
+.badge-legendary {
+  background: var(--rarity-legendary);
+  @apply text-black;
+}
+
+.badge-mythic {
+  background: linear-gradient(135deg, var(--rarity-mythic), oklch(0.6 0.2 280));
+  @apply text-white;
+}
+
+/* Barra de energia */
+.energy-bar {
+  @apply h-2 rounded-full overflow-hidden;
+  background: oklch(0.2 0.02 280);
+}
+
+.energy-bar-fill {
+  @apply h-full rounded-full transition-all duration-500;
+  background: linear-gradient(90deg, oklch(0.75 0.18 180), oklch(0.85 0.2 175));
+}
+
+/* Indicador de stock */
+.stock-stable {
+  color: oklch(0.72 0.18 155);
+}
+
+.stock-volatile {
+  color: oklch(0.78 0.18 85);
+  @apply animate-pulse;
+}
+
+.stock-generous {
+  color: oklch(0.75 0.18 180);
+}
+
+.stock-scarce {
+  color: oklch(0.65 0.22 25);
+}
+
+/* Efeito de purificação de input */
+.input-purified {
+  @apply relative overflow-hidden;
+}
+
+.input-purified::before {
+  content: '';
+  @apply absolute inset-0 rounded-md pointer-events-none;
+  background: linear-gradient(90deg, 
+    oklch(0.75 0.18 180 / 0) 0%,
+    oklch(0.75 0.18 180 / 0.1) 50%,
+    oklch(0.75 0.18 180 / 0) 100%
+  );
+  animation: purify-scan 2s ease-in-out infinite;
+}
+
+@keyframes purify-scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Checkpoint visual de segurança */
+.security-checkpoint {
+  @apply relative border-l-4 pl-4 py-2;
+  border-color: oklch(0.72 0.18 155);
+}
+
+.security-checkpoint::before {
+  content: '◆';
+  @apply absolute -left-2 top-1/2 -translate-y-1/2 text-xs;
+  color: oklch(0.72 0.18 155);
+}
+
+/* Narrativa oracular */
+.oracular-text {
+  @apply font-mono text-sm text-muted-foreground italic;
+  letter-spacing: 0.02em;
+}
+
+/* Grid de produtos vivo */
+.product-grid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Transição de página */
+.page-transition {
+  animation: consciousness-emerge 0.6s ease-out forwards;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * ANIMAÇÕES DO ARTEFACTO 3D - Adicionadas para o hero
+ * @author Maria Sambé
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Rotação lenta para anéis orbitais */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Pulso lento para glows */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Gradiente radial para glows */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
